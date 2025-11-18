@@ -1,0 +1,145 @@
+pg-booking-website/
+├── index.html
+├── listings.html
+├── booking.html
+├── style.css
+└── script.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PG Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to PG Booking</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="listings.html">Listings</a>
+      <a href="booking.html">Book Now</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Find Your Perfect PG</h2>
+      <p>Browse listings and book your stay easily.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 PG Booking</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PG Listings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Available PGs</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Book Now</a>
+    </nav>
+  </header>
+  <main>
+    <div class="pg-card">
+      <h2>Sunrise PG</h2>
+      <p>Location: Hyderabad</p>
+      <p>Price: ₹6,000/month</p>
+      <p>Amenities: Wi-Fi, Meals, Laundry</p>
+    </div>
+    <div class="pg-card">
+      <h2>Green Nest PG</h2>
+      <p>Location: Secunderabad</p>
+      <p>Price: ₹5,500/month</p>
+      <p>Amenities: AC, Parking, Security</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 PG Booking</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a PG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Book Your Stay</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="listings.html">Listings</a>
+    </nav>
+  </header>
+  <main>
+    <form id="bookingForm">
+      <label>Name: <input type="text" name="name" required /></label>
+      <label>Email: <input type="email" name="email" required /></label>
+      <label>Check-in Date: <input type="date" name="checkin" required /></label>
+      <label>Room Type:
+        <select name="room">
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+        </select>
+      </label>
+      <button type="submit">Book Now</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 PG Booking</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+.pg-card {
+  border: 1px solid #ccc;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+document.getElementById("bookingForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Booking submitted! We'll contact you soon.");
+});
